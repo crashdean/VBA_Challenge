@@ -129,7 +129,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
       MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
       
       
-![](Resources/Stock_Analysis_2018.png)      
+![](Resources/Stock_analysis_2017.png)      
 ![](Resources/Stock_Analysis_2018.png)
 
    
