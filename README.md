@@ -129,8 +129,9 @@ and set as a string.   Then the tickers array was created setting each ticker va
       MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
       
       
-![](Resources/Buttons_input_Box.png)
 ![](Resources/VBA_Challenge_2017.png)
+
+
 ![](Resources/VBA_Challenge_2018.png)
 
     
