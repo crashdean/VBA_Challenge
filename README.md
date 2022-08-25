@@ -128,11 +128,11 @@ and set as a string.   Then the tickers array was created setting each ticker va
       endTime = Timer
       MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
       
-      
-
-
+     
 
 ![](Resources/Stock_Analysis_2017.png)
+
+
 
 ![](Resources/Stock_Analysis_2018.png)
 
