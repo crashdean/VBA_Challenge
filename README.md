@@ -130,7 +130,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
       
      
 
-![](Resources/Stock_Analysis_2017.png)
+
 
 
 
