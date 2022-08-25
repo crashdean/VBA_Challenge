@@ -15,18 +15,40 @@ and set as a string.   Then the tickers array was created setting each ticker va
  'Initialize array of all tickers
     Dim tickers(12) As String
     
-    tickers(0) = "AY"
-    tickers(1) = "CSIQ"
-    tickers(2) = "DQ"
-    tickers(3) = "ENPH"
-    tickers(4) = "FSLR"
-    tickers(5) = "HASI"
-    tickers(6) = "JKS"
-    tickers(7) = "RUN"
-    tickers(8) = "SEDG"
-    tickers(9) = "SPWR"
-    tickers(10) = "TERP"
-    tickers(11) = "VSLR"
+     tickers(0) = "AY"
+     tickers(1) = "CSIQ"
+     tickers(2) = "DQ"
+     tickers(3) = "ENPH"
+     tickers(4) = "FSLR"
+     tickers(5) = "HASI"
+     tickers(6) = "JKS"
+     tickers(7) = "RUN"
+     tickers(8) = "SEDG"
+     tickers(9) = "SPWR"
+     tickers(10) = "TERP"
+     tickers(11) = "VSLR"
+    
+    
+    The worksheet(yearValue) was made active and the Row count was determined by using the boiler plate below.
+    
+    RowCount = Cells(Rows.Count, "A").End(xlUp).Row 
+    
+    
+   The tickerIndex variable was created and then initialized as zero.  Three other variables tickerVolumes,
+   tickerStartPrices, and tickerEndingPrices were created and set with the correct data type.
+   
+    Dim tickerIndex As Integer
+    
+    tickerIndex = 0
+    
+    Dim tickerVolumes(12) As Long
+    
+    Dim tickerStartingPrices(12) As Single
+    
+    Dim tickerEndingPrices(12) As Single
+   
+    
+    
     
     
 
