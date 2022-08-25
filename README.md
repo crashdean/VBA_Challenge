@@ -89,6 +89,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     Next i
     
     
+    
    The chart cells values were set using the Range and format below.
    
     
@@ -98,6 +99,10 @@ and set as a string.   Then the tickers array was created setting each ticker va
      Range("B4:B15").NumberFormat = "#,##0"
      Range("C4:C15").NumberFormat = "0.0%"
      Columns("B").AutoFit   
+     
+     
+     ![](Resources/VBA_Challenges_2017.png)
+     ![](Resources/VBA_Challenges_2018.png)
      
    
    The colors of the cell types were created using a for loop.   
