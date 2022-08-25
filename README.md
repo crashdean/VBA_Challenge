@@ -1,13 +1,14 @@
 # VBA_Challenge
 
-##Overview of Project
+## Overview of Project
 
-The VBA Challenge was a Excel project which used a existing data file containing two years of stock reports.   Creating a macro 
-and using refactoring, the run times and the correct information displayed in the charge was the final objective.   The final 
-chart shows the Ticker, the Total Daily volume, and the Return in percent of the stocks.   The dates for the daily volume were 
-taken from January 01 till December 31 for both the 2017 stock year and the 2018 stock year.   
+   The VBA Challenge was an Excel project which used a existing data file containing two years of stock reports.   The purpose of 
+this challenge was to write a macro that completed the analysis of the stock data and placed the information into a final chart.   The 
+final chart shows the Ticker, the Total Daily volume, and the Return in percent of the stocks.   The dates for the daily volume were 
+taken from January 01 till December 31 for both the 2017 stock year and the 2018 stock year.   Fially, the run time for the macro was also.
+determined.
 
-##Analysis and Challenge
+## Analysis and Challenge
 
 In order to create a macro for the stocks, the correct tickers needed to be initialized.   A variable was created 
 and set as a string.   Then the tickers array was created setting each ticker value.
@@ -29,13 +30,13 @@ and set as a string.   Then the tickers array was created setting each ticker va
      tickers(11) = "VSLR"
     
     
-    The worksheet(yearValue) was made active and the Row count was determined by using the boiler plate below.
+  The worksheet(yearValue) was made active and the RowCount was determined by using the boiler plate below.
     
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row 
     
     
-   The tickerIndex variable was created and then initialized as zero.  Three other variables tickerVolumes,
-   tickerStartPrices, and tickerEndingPrices were created and set with the correct data type.
+  The tickerIndex variable was created and then initialized as zero.  Three other variables tickerVolumes,
+  tickerStartPrices, and tickerEndingPrices were created and set with the correct data type.
    
     Dim tickerIndex As Integer
     
@@ -47,7 +48,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
     Dim tickerEndingPrices(12) As Single
     
-   A for loop was then created to initialize the tickerVolumes to run through the ticker names on the spreedsheet.
+  A For loop was then created to initialize the tickerVolumes to run through the ticker names on the spreedsheet.
    
      For i = 0 To 11
     
@@ -55,16 +56,16 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
     Next i
     
-   In order to loop through all of the rows in the spreedsheet, a for loop was created.  As the rows were loped through, 
-   tickerVolumes was added to itself to increase the total tickerVolume of the last column named Volume.
+  In order to loop through all of the rows in the spreedsheet, a For loop was created.  As the rows were looped through, 
+  tickerVolumes was added to itself to increase the total tickerVolume of the last column named Volume.
    
     For i = 2 To RowCount
     
       tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
       
-   Two If statements were used to find the start and end of each tickerIndex.  The first If found the start of the ticker in
-   in the spreadsheet and the second If found the end.  Once the end of the tickers was found, the tickerIndex was added 
-   to move to the next ticker.
+  Two If statements were used to find the start and end of each tickerIndex.  The first If found the start of the ticker in
+  in the spreadsheet and the second If found the end.  Once the end of the tickers was found, the tickerIndex was added 
+  to move to the next ticker.
    
     If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
        
@@ -88,7 +89,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     Next i
     
     
-   The chart cells value were set using the Range and format below.
+   The chart cells values were set using the Range and format below.
    
     
     Worksheets("All Stocks Analysis").Activate
