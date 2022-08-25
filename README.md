@@ -1,7 +1,32 @@
 # VBA_Challenge
 
-##Purpose fo VBA Challenge
+##Overview of Project
 
-The VBA Challenge was a Excel project which use a existing data file containing two years of stock reports.   Creatinga macro 
-and using refactoring, the run times and the correct information displayed in the charge was the final objective.
+The VBA Challenge was a Excel project which used a existing data file containing two years of stock reports.   Creating a macro 
+and using refactoring, the run times and the correct information displayed in the charge was the final objective.   The final 
+chart shows the Ticker, the Total Daily volume, and the Return in percent of the stocks.   The dates for the daily volume were 
+taken from January 01 till December 31 for both the 2017 stock year and the 2018 stock year.   
+
+##Analysis and Challenge
+
+In order to create a macro for the stocks, the correct tickers needed to be initialized.   A variable was created 
+and set as a string.   Then the tickers array was created setting each ticker value.
+
+ 'Initialize array of all tickers
+    Dim tickers(12) As String
+    
+    tickers(0) = "AY"
+    tickers(1) = "CSIQ"
+    tickers(2) = "DQ"
+    tickers(3) = "ENPH"
+    tickers(4) = "FSLR"
+    tickers(5) = "HASI"
+    tickers(6) = "JKS"
+    tickers(7) = "RUN"
+    tickers(8) = "SEDG"
+    tickers(9) = "SPWR"
+    tickers(10) = "TERP"
+    tickers(11) = "VSLR"
+    
+    
 
