@@ -46,9 +46,36 @@ and set as a string.   Then the tickers array was created setting each ticker va
     Dim tickerStartingPrices(12) As Single
     
     Dim tickerEndingPrices(12) As Single
+    
+   A for loop was then created to initialize the tickerVolumes to run through the ticker names on the spreedsheet.
    
+     For i = 0 To 11
     
+    tickerVolumes(i) = 0
     
+    Next i
+    
+   In order to loop through all of the rows in the spreedsheet, a for loop was created.  As the rows were loped through, 
+   tickerVolumes was added to itself to increase the total tickerVolume of the last column named Volume.
+   
+    For i = 2 To RowCount
+    
+      tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+      
+   Two If statements were used to find the start and end of each tickerIndex.  The first If found the start of the ticker in
+   in the spreadsheet and the second If found the end.  Once the end of the tickers was found, the tickerIndex was added 
+   to move to the next ticker.
+   
+    If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+       
+       tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+       
+    End If
+    
+    If Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+        tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+        
+        tickerIndex = tickerIndex + 1
     
     
 
