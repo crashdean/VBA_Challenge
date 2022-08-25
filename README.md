@@ -12,7 +12,7 @@ taken from January 01 till December 31 for both the 2017 stock year and the 2018
 In order to create a macro for the stocks, the correct tickers needed to be initialized.   A variable was created 
 and set as a string.   Then the tickers array was created setting each ticker value.
 
- 'Initialize array of all tickers
+ 
     Dim tickers(12) As String
     
      tickers(0) = "AY"
@@ -76,6 +76,55 @@ and set as a string.   Then the tickers array was created setting each ticker va
         tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
         
         tickerIndex = tickerIndex + 1
+        
+   The active worksheet was changed to All Stocks Analysis.   The chart for the macro was created using the assigned cells 
+   for the headers.
+   
+   
+    Worksheets("All Stocks Analysis").Activate
+       Cells(4 + i, 1).Value = tickers(i)
+       Cells(4 + i, 2).Value = tickerVolumes(i)
+       Cells(4 + i, 3).Value = ((tickerEndingPrices(i) - tickerStartingPrices(i)) / tickerStartingPrices(i))
+    Next i
+    
+    
+   The chart cells value were set using the Range and format below.
+   
+    
+    Worksheets("All Stocks Analysis").Activate
+     Range("A3:C3").Font.FontStyle = "Bold"
+     Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+     Range("B4:B15").NumberFormat = "#,##0"
+     Range("C4:C15").NumberFormat = "0.0%"
+     Columns("B").AutoFit   
+     
+   
+   The colors of the cell types were created using a for loop.   
+   
+
+     dataRowStart = 4
+     dataRowEnd = 15
+   
+     For i = dataRowStart To dataRowEnd
+     
+        If Cells(i, 3) > 0 Then 
+           Cells(i, 3).Interior.Color = vbGreen    
+        Else
+           Cells(i, 3).Interior.Color = vbRed
+        End If    
+     Next i
+     
+    
+    
+    In order to calculate the elapsed time for running the macro, the following code was used.   Here we have the dataRowsStart
+    and dataRowsEnd.
+   
+   
+   
+ 
+      endTime = Timer
+      MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
+
     
     
 
