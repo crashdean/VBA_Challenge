@@ -112,12 +112,12 @@ and set as a string.   Then the tickers array was created setting each ticker va
         Else
            Cells(i, 3).Interior.Color = vbRed
         End If    
-     Next i
+      Next i
      
     
     
-    In order to calculate the elapsed time for running the macro, the following code was used.   Here we have the dataRowsStart
-    and dataRowsEnd.
+   In order to calculate the elapsed time for running the macro, the following code was used.   Here we have the dataRowsStart
+   and dataRowsEnd.
    
    
    
