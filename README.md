@@ -134,6 +134,8 @@ and set as a string.   Then the tickers array was created setting each ticker va
 
 ![](Resources/VBA_Challenge_2018.png)
 
+
+
     
     
 
