@@ -101,8 +101,8 @@ and set as a string.   Then the tickers array was created setting each ticker va
      Columns("B").AutoFit   
      
      
-     ![](Resources/VBA_Challenges_2017.png)
-     ![](Resources/VBA_Challenges_2018.png)
+     ![](Resources/VBA_Challenge_2017.png)
+     ![](Resources/VBA_Challenge_2018.png)
      
    
    The colors of the cell types were created using a for loop.   
