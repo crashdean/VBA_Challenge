@@ -148,5 +148,69 @@ and set as a string.   Then the tickers array was created setting each ticker va
 ![](Resources/Stock_analysis_2017.png)
 ![](Resources/Stock_Analysis_2018.png)
 
+
+
+## Results
+
+
+For the macro we created, the refactoring significantly reduced the elaspe time for both the 2017
+and 2018 years.The original macro used a nested For loop to loop through all of the tickers(i) and 
+then add the totalVolume of the ticker Cells.
+   
+   
+   If Cells(j, 1).Value = ticker Then
+   
+      totalVolume = totalVolume + Cells(j, 8).Value
+      
+   End If
+
+
+It then used another for loop to check for the starting and ending tickerVolume.
+
+
+
+ If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+   
+      startingPrice = Cells(j, 6).Value
+      
+   End If
+'Find the ending price for the current ticker.
+
+   If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+   
+      endingPrice = Cells(j, 6).Value
+      
+   End If
+   
    
 
+   This slowed the macro down due to the amount of loops to complete the macro function.   
+   With the refactored macro, the smae code was changed to run quicker.   The tickerVolume,
+   tickerStartingPriceses and the tickerEndingPrices variables were created.    The variables
+   were set to increase as the cell volume was counted.
+   
+   
+   
+   tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+   
+   
+   
+   Then the start and end cells for the ticker were found using the following If statment.
+   
+   
+   
+   
+   If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+       
+       tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+       
+    End If
+    
+    
+    
+    By doing this, is combined the loops for faster evaluation.
+   
+   
+   
+   
+   
