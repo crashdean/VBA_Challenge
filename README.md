@@ -153,30 +153,29 @@ and set as a string.   Then the tickers array was created setting each ticker va
 ## Results
 
 
-For the macro we created, the refactoring significantly reduced the elaspe time for both the 2017
-and 2018 years.The original macro used a nested For loop to loop through all of the tickers(i) and 
-then add the totalVolume of the ticker Cells.
+ For the macro we created, the refactoring significantly reduced the elaspe time for both the 2017
+ and 2018 years.The original macro used a nested For loop to loop through all of the tickers(i) and 
+ then add the totalVolume of the ticker Cells.
    
    
-   If Cells(j, 1).Value = ticker Then
+    If Cells(j, 1).Value = ticker Then
       totalVolume = totalVolume + Cells(j, 8).Value   
-   End If
+    End If
 
 
-It then used another for loop to check for the starting and ending tickerVolume.
+  It then used another for loop to check for the starting and ending tickerVolume.
 
 
 
- If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+    If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
       startingPrice = Cells(j, 6).Value  
-   End If
+    End If
    
    
-'Find the ending price for the current ticker.
 
-   If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+    If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
       endingPrice = Cells(j, 6).Value   
-   End If
+    End If
    
    
 
