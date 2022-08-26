@@ -32,7 +32,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
   The worksheet(yearValue) was made active and the RowCount was determined by using the boiler plate below.
     
-    RowCount = Cells(Rows.Count, "A").End(xlUp).Row 
+     RowCount = Cells(Rows.Count, "A").End(xlUp).Row 
     
     
   The tickerIndex variable was created and then initialized as zero.  Three other variables tickerVolumes,
@@ -50,7 +50,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
   A For loop was then created to initialize the tickerVolumes to run through the ticker names on the spreedsheet.
    
-     For i = 0 To 11
+    For i = 0 To 11
     
     tickerVolumes(i) = 0
     
@@ -63,7 +63,7 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
       tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
       
-  Two If statements were used to find the start and end of each tickerIndex.  The first If found the start of the ticker in
+  Two If statements were used to find the start and end of each tickerIndex.  The first If found the start of the ticker
   in the spreadsheet and the second If found the end.  Once the end of the tickers was found, the tickerIndex was added 
   to move to the next ticker.
    
