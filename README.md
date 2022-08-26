@@ -152,8 +152,20 @@ and set as a string.   Then the tickers array was created setting each ticker va
 
 ## Results
 
+The elapse time for the refactored macro was important for longer data sets in the future.   If all 
+stocks in the stock market were being evaluated, the difference in run times would be significate.   
+For the purpose of this macro, the time was not as significante with the total time for both being 
+under 1 second.   The importance of the color coding and formating fthe font enabled the data to be  
+interpreted faster andget a better comparision visually.
 
- For the macro we created, the refactoring significantly reduced the elaspe time for both the 2017
+   
+   
+   
+ ## Summary
+   
+   
+   
+   For the macro we created, the refactoring significantly reduced the elaspe time for both the 2017
  and 2018 years.The original macro used a nested For loop to loop through all of the tickers(i) and 
  then add the totalVolume of the ticker Cells.
    
@@ -207,8 +219,6 @@ and set as a string.   Then the tickers array was created setting each ticker va
     
     
    By doing this, is combined the loops for faster evaluation.
-   
-   
    
    
    
