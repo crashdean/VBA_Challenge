@@ -187,26 +187,26 @@ and set as a string.   Then the tickers array was created setting each ticker va
    
    
    
-   tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+      tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
    
    
    
    
-   Then the start and end cells for the ticker were found using the following If statment.
+  Then the start and end cells for the ticker were found using the following If statment.
    
    
    
    
    
-   If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+      If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-    End If
+      End If
     
     
     
     
     
-    By doing this, is combined the loops for faster evaluation.
+   By doing this, is combined the loops for faster evaluation.
    
    
    
