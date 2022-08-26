@@ -138,12 +138,14 @@ and set as a string.   Then the tickers array was created setting each ticker va
 ![](Resources/VBA_Challenge_2017.png)
 ![](Resources/VBA_Challenge_2018.png)
 
+
    
    The images below show the original macro code for the 2017 and 2018 years.
    
    
+   
 
-![](Resources/Stock_Analysis_2017.png)
+![](Resources/Stock_analysis_2017.png)
 ![](Resources/Stock_Analysis_2018.png)
 
    
