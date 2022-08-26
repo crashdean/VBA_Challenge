@@ -129,7 +129,10 @@ and set as a string.   Then the tickers array was created setting each ticker va
       MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
       
       
-    The images below show the elapse time for the refactered macro code for the 2017 and 2018 years.      
+      
+      
+   The images below show the elapse time for the refactered macro code for the 2017 and 2018 years.   
+    
       
       
 ![](Resources/VBA_Challenge_2017.png)
