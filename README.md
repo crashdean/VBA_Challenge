@@ -191,11 +191,14 @@ It then used another for loop to check for the starting and ending tickerVolume.
    
    
    
+   
    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
    
    
    
+   
    Then the start and end cells for the ticker were found using the following If statment.
+   
    
    
    
@@ -205,6 +208,8 @@ It then used another for loop to check for the starting and ending tickerVolume.
        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
        
     End If
+    
+    
     
     
     
