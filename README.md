@@ -159,9 +159,7 @@ then add the totalVolume of the ticker Cells.
    
    
    If Cells(j, 1).Value = ticker Then
-   
-      totalVolume = totalVolume + Cells(j, 8).Value
-      
+      totalVolume = totalVolume + Cells(j, 8).Value   
    End If
 
 
@@ -170,16 +168,14 @@ It then used another for loop to check for the starting and ending tickerVolume.
 
 
  If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-   
-      startingPrice = Cells(j, 6).Value
-      
+      startingPrice = Cells(j, 6).Value  
    End If
+   
+   
 'Find the ending price for the current ticker.
 
    If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
-   
-      endingPrice = Cells(j, 6).Value
-      
+      endingPrice = Cells(j, 6).Value   
    End If
    
    
@@ -204,9 +200,7 @@ It then used another for loop to check for the starting and ending tickerVolume.
    
    
    If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
-       
        tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-       
     End If
     
     
